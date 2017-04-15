@@ -40,13 +40,19 @@ In another terminal tab, you can use `nodemon`:
 $ yarn nodemon
 ```
 
+To check if the API is running, browse to:
+
+[localhost:4001/api](http://localhost:4001/api)
+
 ### Once deployed
 
-When the API is deployed, ensure that the `MONGODB_URI` environment variable points to a valid MongoDB instance.
+Ensure that the following environment variables are set in the deployed environment:
+
+- `MONGODB_URI` &ndash; points to a valid MongoDB instance
+- `APP_SECRET` &ndash; a randomly-generated secret (see [passwordsgenerator.net/](https://passwordsgenerator.net/))
 
 To start the API:
 
 ``` sh
 $ yarn start
 ```
-

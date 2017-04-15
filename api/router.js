@@ -1,7 +1,18 @@
 const router = require('express').Router();
+const passport = require('passport');
+const AuthController = require('./controllers/auth');
+const MetaSerializer = require('./serializers/meta.serializer');
 
 router.get('/', (req, res) => {
-  res.send('server running');
+  const status = 200;
+  const serializedMessage = MetaSerializer.serialize({ status, message: 'API is running' });
+
+  return res.status(status).json(serializedMessage);
 });
+
+router
+  .get('/logout', AuthController.logOut)
+  .post('/login', passport.authenticate('local-login'), AuthController.logIn)
+  .post('/signup', passport.authenticate('local-signup'), AuthController.signUp);
 
 module.exports = router;
