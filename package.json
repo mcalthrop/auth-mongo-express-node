@@ -6,7 +6,7 @@
   "repository": "git@github.com:mcalthrop/mongo-express-node-auth.git",
   "author": "Matt Calthrop <mcalthrop@gmail.com>",
   "scripts": {
-    "nodemon": "nodemon api",
+    "nodemon": "MONGODB_URI=mongodb://localhost/mongo-express-node-auth-local nodemon api",
     "start": "node api"
   },
   "engines": {
@@ -16,6 +16,7 @@
   "license": "MIT",
   "dependencies": {
     "express": "^4.15.2",
+    "mongoose": "^4.9.4",
     "morgan": "^1.8.1",
     "nodemon": "^1.11.0"
   }
