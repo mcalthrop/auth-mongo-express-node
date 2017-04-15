@@ -1,0 +1,22 @@
+{
+  "name": "mongo-express-node-auth",
+  "version": "1.0.0",
+  "description": "Express server with Mongo db and authentication",
+  "main": "server.js",
+  "repository": "git@github.com:mcalthrop/mongo-express-node-auth.git",
+  "author": "Matt Calthrop <mcalthrop@gmail.com>",
+  "scripts": {
+    "nodemon": "nodemon api",
+    "start": "node api"
+  },
+  "engines": {
+    "node": "6.8.0",
+    "npm": ">= 3"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.15.2",
+    "morgan": "^1.8.1",
+    "nodemon": "^1.11.0"
+  }
+}
