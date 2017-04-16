@@ -80,3 +80,11 @@ And to auto-correct any errors that can be corrected:
 ``` sh
 $ yarn lint:fix
 ```
+
+### API
+
+To run the API tests:
+
+``` sh
+$ yarn jasmine
+```
