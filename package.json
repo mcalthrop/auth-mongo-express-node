@@ -7,10 +7,10 @@
   "author": "Matt Calthrop <mcalthrop@gmail.com>",
   "scripts": {
     "eslint": "eslint",
-    "jasmine": "NODE_ENV=test jasmine",
+    "jasmine": "NODE_ENV=test MONGODB_URI=mongodb://localhost/auth-mongo-express-node-local-test jasmine",
     "lint": "yarn eslint -- api spec",
     "lint:fix": "yarn eslint -- --fix api spec",
-    "nodemon": "APP_SECRET=local-secret MONGODB_URI=mongodb://localhost/mongo-express-node-auth-local nodemon api",
+    "nodemon": "APP_SECRET=local-secret MONGODB_URI=mongodb://localhost/auth-mongo-express-node-local nodemon api",
     "start": "node api",
     "test": "yarn lint && yarn jasmine"
   },

@@ -10,4 +10,6 @@ const config = {
   secret: APP_SECRET
 };
 
+console.info('MONGODB_URI:', MONGODB_URI);
+
 module.exports = config;
