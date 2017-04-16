@@ -11,5 +11,6 @@ const config = {
 };
 
 console.info('MONGODB_URI:', MONGODB_URI);
+console.info('PORT:', PORT);
 
 module.exports = config;
