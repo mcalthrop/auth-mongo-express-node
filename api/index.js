@@ -19,7 +19,9 @@ mongoose.connect(config.db.uri, (err) => {
   console.info('Connected to database:', mongoose.connection.name);
 });
 
-app.use(morgan('dev'));
+if (process.env.NODE_ENV !== 'test') {
+  app.use(morgan('dev'));
+}
 app.use(bodyParser.json({ limit: '10mb' }));
 app.use(bodyParser.urlencoded({ limit: '10mb', extended: true }));
 app.use(cookieParser());
@@ -33,5 +35,9 @@ app.use(passport.session()); // persistent login sessions
 app.use('/api', router);
 
 app.listen(config.port, () => {
-  console.info(`Express is running: http://localhost:${config.port}/`);
+  if (process.env.NODE_ENV === 'development') {
+    console.info(`Express is running: http://localhost:${config.port}/`);
+  }
 });
+
+module.exports = app;

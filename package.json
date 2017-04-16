@@ -7,11 +7,12 @@
   "author": "Matt Calthrop <mcalthrop@gmail.com>",
   "scripts": {
     "eslint": "eslint",
-    "lint": "yarn eslint -- api",
-    "lint:fix": "yarn eslint -- --fix api",
+    "jasmine": "NODE_ENV=test jasmine",
+    "lint": "yarn eslint -- api spec",
+    "lint:fix": "yarn eslint -- --fix api spec",
     "nodemon": "APP_SECRET=local-secret MONGODB_URI=mongodb://localhost/mongo-express-node-auth-local nodemon api",
     "start": "node api",
-    "test": "yarn lint"
+    "test": "yarn lint && yarn jasmine"
   },
   "engines": {
     "node": "6.8.0",
@@ -32,6 +33,9 @@
     "passport-local": "^1.0.0"
   },
   "devDependencies": {
-    "eslint": "^3.19.0"
+    "eslint": "^3.19.0",
+    "jasmine": "^2.5.3",
+    "jasmine-spec-reporter": "^4.0.0",
+    "supertest": "^3.0.0"
   }
 }
