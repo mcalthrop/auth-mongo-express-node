@@ -3,10 +3,6 @@ const app = require('../api');
 const api = supertest(app);
 const ENDPOINT = '/api';
 
-beforeEach(() => {
-  this.endpoint = ENDPOINT;
-});
-
 describe('API root', () => {
   describe(`GET ${ENDPOINT}`, () => {
     it('should return 200', (done) => {
