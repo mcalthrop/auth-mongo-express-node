@@ -6,6 +6,8 @@
   "repository": "git@github.com:mcalthrop/mongo-express-node-auth.git",
   "author": "Matt Calthrop <mcalthrop@gmail.com>",
   "scripts": {
+    "db:seed": "node db/seed",
+    "db:seed:local": "MONGODB_URI=mongodb://localhost/auth-mongo-express-node-local node db/seed",
     "eslint": "eslint",
     "jasmine": "PORT=4002 NODE_ENV=test MONGODB_URI=mongodb://localhost/auth-mongo-express-node-local-test jasmine",
     "lint": "yarn eslint -- api spec",

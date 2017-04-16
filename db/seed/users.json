@@ -1,0 +1,20 @@
+[
+  {
+    "role": "admin",
+    "local": {
+      "email": "admin@example.com",
+      "firstName": "Admin",
+      "lastName": "Example",
+      "password": "pw123"
+    }
+  },
+  {
+    "role": "standard",
+    "local": {
+      "email": "standard@example.com",
+      "firstName": "Standard",
+      "lastName": "Example",
+      "password": "pw123"
+    }
+  }
+]

@@ -16,7 +16,7 @@ mongoose.connect(config.db.uri, (err) => {
     console.error('Could not connect to Mongo: err:', err);
     process.exit(1);
   }
-  console.info('Connected to database:', mongoose.connection.name);
+  console.info(`Connected to database: ${mongoose.connection.name}`);
 });
 
 if (process.env.NODE_ENV !== 'test') {

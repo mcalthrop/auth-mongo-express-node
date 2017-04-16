@@ -88,3 +88,17 @@ To run the API tests:
 ``` sh
 $ yarn jasmine
 ```
+
+## Seeding the database
+
+To seed the Mongo database with sample data:
+
+``` sh
+$ yarn db:seed
+```
+
+When developing locally, running the following command will seed the local database:
+
+``` sh
+$ yarn db:seed:local
+```
