@@ -6,8 +6,12 @@
   "repository": "git@github.com:mcalthrop/mongo-express-node-auth.git",
   "author": "Matt Calthrop <mcalthrop@gmail.com>",
   "scripts": {
+    "eslint": "eslint",
+    "lint": "yarn eslint -- api",
+    "lint:fix": "yarn eslint -- --fix api",
     "nodemon": "APP_SECRET=local-secret MONGODB_URI=mongodb://localhost/mongo-express-node-auth-local nodemon api",
-    "start": "node api"
+    "start": "node api",
+    "test": "yarn lint"
   },
   "engines": {
     "node": "6.8.0",
@@ -26,5 +30,8 @@
     "nodemon": "^1.11.0",
     "passport": "^0.3.2",
     "passport-local": "^1.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^3.19.0"
   }
 }

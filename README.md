@@ -56,3 +56,27 @@ To start the API:
 ``` sh
 $ yarn start
 ```
+
+## Tests
+
+### All
+
+To run all tests:
+
+``` sh
+$ yarn test
+```
+
+### Linting
+
+The Javascript code can be linted as follows:
+
+``` sh
+$ yarn lint
+```
+
+And to auto-correct any errors that can be corrected:
+
+``` sh
+$ yarn lint:fix
+```
