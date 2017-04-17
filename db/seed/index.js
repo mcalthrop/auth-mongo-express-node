@@ -1,35 +1,8 @@
 const mongoose = require('mongoose');
 mongoose.Promise = global.Promise;
 const UserModel = require('../../api/models/user.model');
-const config = require('../../api/config');
+const common = require('../common');
 const seedUsers = require('./users.json');
-
-function connect() {
-  console.info('Connecting to database');
-
-  return mongoose.connect(config.db.uri).then(
-    () => console.info(`-> connected to ${mongoose.connection.name}`)
-  );
-}
-
-function disconnect() {
-  console.info('Closing connection');
-
-  return mongoose.connection.close().then(
-    () => console.info('-> closed')
-  );
-}
-
-function error(error) {
-  console.error('ERROR:', error);
-  process.exit(1);
-}
-
-function done() {
-  console.info('Done');
-
-  return Promise.resolve();
-}
 
 function createUser(user) {
   const userModel = new UserModel();
@@ -80,8 +53,8 @@ function createUsers() {
   );
 }
 
-connect()
+common.connect()
   .then(createUsers)
-  .then(disconnect)
-  .then(done)
-  .catch(error);
+  .then(common.disconnect)
+  .then(common.done)
+  .catch(common.error);
