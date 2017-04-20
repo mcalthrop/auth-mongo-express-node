@@ -2,6 +2,24 @@
 
 _Express server with MongoDB and authentication_
 
+## Overview
+
+This is a codebase that can be used as a starting point for an API that provides endpoints for authentication:
+
+- signup
+- login
+- logout
+
+The following features and technologies are used:
+
+- [Yarn](https://yarnpkg.com/en/)
+- [ES2015/ES6](https://babeljs.io/learn-es2015/)
+- [Eslint](http://eslint.org/)
+- MVC implementation using [Node](https://nodejs.org/en/), [Express](http://expressjs.com/), [Mongo](https://www.mongodb.com/) and [Mongoose](http://mongoosejs.com/)
+- JSON data returned in [JSON API](http://jsonapi.org/) format
+- [PassportJS](http://passportjs.org/) for authentication and [Permission](https://www.npmjs.com/package/permission) for authorisation
+- [Jasmine](https://jasmine.github.io/) and [Supertest](https://www.npmjs.com/package/supertest) for testing the API endpoints
+
 ## Setup
 
 ### Install yarn
@@ -25,6 +43,8 @@ Follow the instructions here:
 [www.mongodb.com/download-center#community](https://www.mongodb.com/download-center#community)
 
 ## Running the API
+
+> API code is in the `api` directory.
 
 ### During development
 
@@ -69,6 +89,8 @@ $ yarn test
 
 ### Linting
 
+> Check the `.eslint` file for the Eslint rules.
+
 The Javascript code can be linted as follows:
 
 ``` sh
@@ -83,6 +105,8 @@ $ yarn lint:fix
 
 ### API
 
+> API tests are in the `spec` directory.
+
 To run the API tests:
 
 ``` sh
@@ -90,6 +114,8 @@ $ yarn jasmine
 ```
 
 ## Seeding the database
+
+> Database-related code is in the `db` directory.
 
 To seed the Mongo database with sample data:
 
