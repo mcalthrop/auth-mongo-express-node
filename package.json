@@ -11,7 +11,7 @@
     "db:reset": "node db/reset",
     "db:reset:local": "MONGODB_URI=mongodb://localhost/auth-mongo-express-node-local node db/reset",
     "eslint": "eslint",
-    "jasmine": "PORT=4002 NODE_ENV=test MONGODB_URI=mongodb://localhost/auth-mongo-express-node-local-test jasmine",
+    "jasmine": "PORT=4002 APP_SECRET=local-secret NODE_ENV=test MONGODB_URI=mongodb://localhost/auth-mongo-express-node-local-test jasmine",
     "lint": "yarn eslint -- api spec",
     "lint:fix": "yarn eslint -- --fix api spec",
     "nodemon": "APP_SECRET=local-secret MONGODB_URI=mongodb://localhost/auth-mongo-express-node-local nodemon api",

@@ -70,9 +70,9 @@ passport.use(
         }
       ).then(
         (successResponse) => {
+          const status = 201;
           console.info(`local-signup: saved new user with email address "${email}" and role "${role}"`);
-
-          return successResponse;
+          done(null, successResponse, status);
         },
         (errorResponse) => {
           const status = 500;
