@@ -1,7 +1,7 @@
 const APP_SECRET = process.env.APP_SECRET;
 const PORT = process.env.PORT || 4001;
 const MONGODB_URI = process.env.MONGODB_URI;
-const mandatoryEnvVars = ['APP_SECRET', 'PORT', 'MONGODB_URI'];
+const mandatoryEnvVars = ['APP_SECRET', 'MONGODB_URI'];
 
 const config = {
   port: PORT,
