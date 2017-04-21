@@ -18,6 +18,7 @@ The following features and technologies are used:
 - MVC implementation using [Node](https://nodejs.org/en/), [Express](http://expressjs.com/), [Mongo](https://www.mongodb.com/) and [Mongoose](http://mongoosejs.com/)
 - JSON data returned in [JSON API](http://jsonapi.org/) format
 - [PassportJS](http://passportjs.org/) for authentication and [Permission](https://www.npmjs.com/package/permission) for authorisation
+- [APIDOC](http://apidocjs.com/) for documenting the API endpoints
 - [Jasmine](https://jasmine.github.io/) and [Supertest](https://www.npmjs.com/package/supertest) for testing the API endpoints
 
 ## Setup
@@ -112,6 +113,16 @@ To run the API tests:
 ``` sh
 $ yarn jasmine
 ```
+
+## API docs
+
+To generate the documentation for the API endpoints:
+
+``` sh
+$ yarn apidocs
+```
+
+And to view the output, open the `apidocs/index.html` file in your browser.
 
 ## Seeding the database
 
