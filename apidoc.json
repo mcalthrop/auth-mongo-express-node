@@ -1,0 +1,6 @@
+{
+  "name": "mongo-express-node-auth API",
+  "version": "0.0.1",
+  "description": "Documentation for the endpoints of the API for the mongo-express-node-auth project",
+  "title": "mongo-express-node-auth API Docs"
+}

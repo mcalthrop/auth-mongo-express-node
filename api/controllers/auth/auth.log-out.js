@@ -2,6 +2,13 @@ const MetaSerializer = require('../../serializers/meta.serializer');
 
 /**
  * @api {get} /api/logout GET /api/logout
+ * @apiDescription Provide facility to log out of the site
+ * @apiName Logout
+ * @apiGroup Authentication
+ * @apiPermission none
+ *
+ * @apiUse SuccessMetaJSONAPI
+ * @apiUse InternalServerError
  */
 function authLogOut(req, res) {
   const status = 200;
