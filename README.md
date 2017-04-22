@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/mcalthrop/auth-mongo-express-node.svg?branch=master)](https://travis-ci.org/mcalthrop/auth-mongo-express-node)
+
 # mongo-express-node-auth
 
 _Express server with MongoDB and authentication_
