@@ -16,6 +16,7 @@ The following features and technologies are used:
 - [ES2015/ES6](https://babeljs.io/learn-es2015/)
 - [Eslint](http://eslint.org/)
 - MVC implementation using [Node](https://nodejs.org/en/), [Express](http://expressjs.com/), [Mongo](https://www.mongodb.com/) and [Mongoose](http://mongoosejs.com/)
+- [Travis](https://travis-ci.org/mcalthrop/auth-mongo-express-node) for CI testing
 - JSON data returned in [JSON API](http://jsonapi.org/) format
 - [PassportJS](http://passportjs.org/) for authentication and [Permission](https://www.npmjs.com/package/permission) for authorisation
 - [APIDOC](http://apidocjs.com/) for documenting the API endpoints
