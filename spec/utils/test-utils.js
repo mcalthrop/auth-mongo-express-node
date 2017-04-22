@@ -42,6 +42,9 @@ function finishTest(done) {
 }
 
 class TestUtils {
+  static get random() {
+    return random;
+  }
   static get user() {
     return user;
   }
