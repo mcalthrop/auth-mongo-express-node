@@ -76,9 +76,64 @@ describe('Me', () => {
     });
 
     describe('when logged in', () => {
-      // TODO: implement tests for a 400 response
-      it('should return 400 when ...', (done) => {
-        TestUtils.finishTest(done)();
+      it('should return 400 when no data provided', (done) => {
+        TestUtils.user.createAndLogIn(api, 'standard').then(
+          ({ response }) => {
+            api.put(ENDPOINT)
+              .set('Cookie', TestUtils.responseCookies(response))
+              .set('Accept', 'application/json')
+              .send()
+              .expect(400, TestUtils.finishTest(done));
+          }
+        );
+      });
+      it('should return 204 when only email provided', (done) => {
+        TestUtils.user.createAndLogIn(api, 'standard').then(
+          ({ response, auth }) => {
+            const data = Utils.duplicateObject(auth);
+            data.email += '.mod';
+            delete data.password;
+            delete data.firstName;
+            delete data.lastName;
+            api.put(ENDPOINT)
+              .set('Cookie', TestUtils.responseCookies(response))
+              .set('Accept', 'application/json')
+              .send(data)
+              .expect(204, TestUtils.finishTest(done));
+          }
+        );
+      });
+      it('should return 204 when only firstName provided', (done) => {
+        TestUtils.user.createAndLogIn(api, 'standard').then(
+          ({ response, auth }) => {
+            const data = Utils.duplicateObject(auth);
+            data.firstName += '.mod';
+            delete data.password;
+            delete data.email;
+            delete data.lastName;
+            api.put(ENDPOINT)
+              .set('Cookie', TestUtils.responseCookies(response))
+              .set('Accept', 'application/json')
+              .send(data)
+              .expect(204, TestUtils.finishTest(done));
+          }
+        );
+      });
+      it('should return 204 when only lastName provided', (done) => {
+        TestUtils.user.createAndLogIn(api, 'standard').then(
+          ({ response, auth }) => {
+            const data = Utils.duplicateObject(auth);
+            data.lastName += '.mod';
+            delete data.password;
+            delete data.email;
+            delete data.firstName;
+            api.put(ENDPOINT)
+              .set('Cookie', TestUtils.responseCookies(response))
+              .set('Accept', 'application/json')
+              .send(data)
+              .expect(204, TestUtils.finishTest(done));
+          }
+        );
       });
       it('should return 204 when all data provided', (done) => {
         TestUtils.user.createAndLogIn(api, 'standard').then(

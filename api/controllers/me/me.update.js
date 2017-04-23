@@ -7,6 +7,7 @@ const ErrorSerializer = require('../../serializers/error.serializer');
  * @apiDescription Update information about the logged-in user.
  *
  * If the user is not logged in, return a 401.
+ * If no data is passed in, return a 400.
  *
  * @apiName UpdateMe
  * @apiGroup Me
@@ -29,15 +30,21 @@ function meUpdate(req, res) {
   const updatedUser = Utils.duplicateObject(req.user);
   let status = 204;
 
+  if (Object.keys(req.body).length === 0) {
+    status = 400;
+    const serializedMessage = ErrorSerializer.serialize(status, 'Error retrieving user to update');
+
+    return res.status(status).json(serializedMessage);
+  }
   updatedUser.local.email = req.body.email;
   updatedUser.local.firstName = req.body.firstName;
   updatedUser.local.lastName = req.body.lastName;
 
   UserModel.findOneAndUpdate(conditions, updatedUser, (err) => {
     if (err) {
+      status = 500;
       const serializedMessage = ErrorSerializer.serialize(status, 'Error retrieving user to update');
 
-      status = 500;
       console.error(`meUpdate: error finding user with id "${userId}":`, err);
 
       return res.status(status).json(serializedMessage);
