@@ -1824,6 +1824,10 @@ performance-now@^0.2.0:
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/performance-now/-/performance-now-0.2.0.tgz#33ef30c5c77d4ea21c5a53869d91b56d8f2555e5"
 
+permission@^1.0.4:
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/permission/-/permission-1.0.4.tgz#780cd3af7bacb80925ca777c9d62e1681b25eb99"
+
 pify@^2.0.0:
   version "2.3.0"
   resolved "https://registry.yarnpkg.com/pify/-/pify-2.3.0.tgz#ed141a6ac043a849ea588498e7dca8b15330e90c"

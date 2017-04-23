@@ -1,6 +1,8 @@
 const router = require('express').Router();
 const passport = require('passport');
+const permission = require('permission');
 const AuthController = require('./controllers/auth');
+const MeController = require('./controllers/me');
 const MetaSerializer = require('./serializers/meta.serializer');
 
 router.get('/', (req, res) => {
@@ -14,5 +16,10 @@ router
   .get('/logout', AuthController.logOut)
   .post('/login', passport.authenticate('local-login'), AuthController.logIn)
   .post('/signup', passport.authenticate('local-signup'), AuthController.signUp);
+
+// role required: none - user just needs to be logged in
+router.route('/me')
+  .get(permission(), MeController.index)
+  .put(permission(), MeController.update);
 
 module.exports = router;
