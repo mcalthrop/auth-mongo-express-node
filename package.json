@@ -17,7 +17,7 @@
     "lint:fix": "yarn eslint -- --fix api spec",
     "nodemon": "APP_SECRET=local-secret MONGODB_URI=mongodb://localhost/auth-mongo-express-node-local nodemon api",
     "start": "node api",
-    "test": "yarn lint && yarn jasmine"
+    "test": "yarn lint && yarn apidoc && yarn jasmine"
   },
   "engines": {
     "node": "6.8.0",
