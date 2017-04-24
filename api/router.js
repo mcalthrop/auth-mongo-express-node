@@ -1,8 +1,8 @@
 const router = require('express').Router();
 const passport = require('passport');
 const permission = require('permission');
-const AuthController = require('./controllers/auth');
-const MeController = require('./controllers/me');
+const AuthController = require('./controllers/auth.controller');
+const MeController = require('./controllers/me.controller');
 const MetaSerializer = require('./serializers/meta.serializer');
 
 router.get('/', (req, res) => {
