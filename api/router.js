@@ -3,6 +3,7 @@ const passport = require('passport');
 const permission = require('permission');
 const AuthController = require('./controllers/auth.controller');
 const MeController = require('./controllers/me.controller');
+const UsersController = require('./controllers/users.controller');
 const MetaSerializer = require('./serializers/meta.serializer');
 
 router.get('/', (req, res) => {
@@ -21,5 +22,9 @@ router
 router.route('/me')
   .get(permission(), MeController.index)
   .put(permission(), MeController.update);
+
+// role required: admin
+router.route('/users')
+  .get(permission(['admin']), UsersController.index);
 
 module.exports = router;
