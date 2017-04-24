@@ -2,7 +2,7 @@
 
 # mongo-express-node-auth
 
-_Express server with MongoDB and authentication_
+_Express server with MongoDB and authentication and authorisation_
 
 ## Overview
 
