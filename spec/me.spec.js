@@ -167,8 +167,7 @@ describe('Me', () => {
     describe('when logged in', () => {
       it('should return 404', (done) => {
         TestUtils.user.createAndLogIn(api, 'standard').then(
-          ({ response, auth }) => {
-            this.auth = auth;
+          ({ response }) => {
             api.delete(ENDPOINT)
               .set('Cookie', TestUtils.responseCookies(response))
               .set('Accept', 'application/json')
