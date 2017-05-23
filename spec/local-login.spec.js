@@ -11,14 +11,14 @@ describe('Login (local)', () => {
     describe('checking payload', () => {
       const role = UserModel.validRoles()[0];
 
-      it('should return 999 when only email sent', (done) => {
+      it('should return 400 when only email sent', (done) => {
         TestUtils.user.create(api, role).then(
           (auth) => {
             const email = auth.email;
 
             api.post(ENDPOINT)
               .send({ email })
-              .expect(999, TestUtils.finishTest(done));
+              .expect(400, TestUtils.finishTest(done));
           }
         );
       });
