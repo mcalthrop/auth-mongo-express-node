@@ -18,7 +18,7 @@ describe('Login (local)', () => {
 
             api.post(ENDPOINT)
               .send({ email })
-              .expect(200, TestUtils.finishTest(done));
+              .expect(400, TestUtils.finishTest(done));
           }
         );
       });
