@@ -127,7 +127,7 @@ $ yarn jasmine
 To generate the documentation for the API endpoints:
 
 ``` sh
-$ yarn apidocs
+$ yarn apidoc
 ```
 
 And to view the output, open the `apidocs/index.html` file in your browser.
