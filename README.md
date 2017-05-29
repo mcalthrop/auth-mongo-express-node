@@ -6,7 +6,9 @@ _Express server with MongoDB and authentication and authorisation_
 
 ## Overview
 
-This is a codebase that can be used as a starting point for an API that provides endpoints for authentication:
+This is a codebase that can be used as a starting point for an API that provides endpoints for authentication.
+
+### Routes
 
 - `/api/signup` – create a new user account
 - `/api/login` – log in to an existing account
@@ -16,6 +18,10 @@ Additionally, two routes are provided that require authorisation:
 
 - `/api/me` – allow logged-in user (with any role) to read and update their details
 - `/api/users` – allow a user with the `admin` role to see a list of all users (further routes can be added to implement full CRUD functionality)
+
+See [API docs](#api-docs) for full details.
+
+### Features
 
 The following features and technologies are used:
 
