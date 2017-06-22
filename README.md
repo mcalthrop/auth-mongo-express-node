@@ -153,3 +153,7 @@ When developing locally, running the following command will seed the local datab
 ``` sh
 $ yarn db:seed:local
 ```
+
+## License
+
+[MIT](LICENSE)
